@@ -23,52 +23,52 @@ composer require danog/async-construct
 
 ### AsyncConstruct
 
-[Example](https://github.com/danog/asyncConstruct/blob/master/examples/AsyncConstruct.php)  
+[Example](https://github.com/danog/asyncConstruct/blob/master/examples/async.php)  
 
 Simply `use` this trait in your class, and define a `__construct_async` async method.  
 The trait will automatically run the async method on construction, and expose a set of APIs to wait on the result of the constructor for initialization.  
 
-### init()
+### `init()`
 
 Will blockingly wait for execution of the async constructor, returning its return value.  
 
-### initAsynchronously()
+### `initAsynchronously()`
 
 Will return a promise that, when `yield`ed, will wait for and return the return value of the constructor.
 
-### inited()
+### `inited()`
 
 Returns a boolean, indicating whether the class was initialized or not.  
 
 
 ### BlockingConstruct
 
-[Example](https://github.com/danog/asyncConstruct/blob/master/examples/BlockingConstruct.php)  
+[Example](https://github.com/danog/asyncConstruct/blob/master/examples/blocking.php)  
 
 Exactly like [AsyncConstruct], except that the blocking `init()` function will be automatically called on construction.  
 
 ### AsyncWakeup
 
-[Example](https://github.com/danog/asyncConstruct/blob/master/examples/AsyncWakeup.php)  
+[Example](https://github.com/danog/asyncConstruct/blob/master/examples/asyncWakeup.php)  
 
 Simply `use` this trait in your class, and define a `__wakeup_async` async method.  
 The trait will automatically run the async method on deserialization, and expose a set of APIs to wait on the result of the wakeup function for re-initialization.  
 
-### wakeup()
+### `wakeup()`
 
 Will blockingly wait for execution of the async wakeup function, returning its return value.  
 
-### wakeupAsynchronously()
+### `wakeupAsynchronously()`
 
 Will return a promise that, when `yield`ed, will wait for and return the return value of the wakeup function.
 
-### wokenUp()
+### `wokenUp()`
 
 Returns a boolean, indicating whether the class was initialized or not.  
 
 
 ### BlockingWakeup
 
-[Example](https://github.com/danog/asyncConstruct/blob/master/examples/BlockingWakeup.php)  
+[Example](https://github.com/danog/asyncConstruct/blob/master/examples/blockingWakeup.php)  
 
 Exactly like [AsyncWakeup](#AsyncWakeup), except that the blocking `wakeup()` function will be automatically called on wakeup.  
