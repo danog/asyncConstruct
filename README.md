@@ -45,7 +45,7 @@ Returns a boolean, indicating whether the class was initialized or not.
 
 [Example](https://github.com/danog/asyncConstruct/blob/master/examples/blocking.php)  
 
-Exactly like [AsyncConstruct], except that the blocking `init()` function will be automatically called on construction.  
+Exactly like [AsyncConstruct](#AsyncConstruct), except that the blocking `init()` function will be automatically called on construction.  
 
 ### AsyncWakeup
 
