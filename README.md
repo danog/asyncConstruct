@@ -28,15 +28,15 @@ composer require danog/async-construct
 Simply `use` this trait in your class, and define a `__construct_async` async method.  
 The trait will automatically run the async method on construction, and expose a set of APIs to wait on the result of the constructor for initialization.  
 
-### `init()`
+#### `init()`
 
 Will blockingly wait for execution of the async constructor, returning its return value.  
 
-### `initAsynchronously()`
+#### `initAsynchronously()`
 
 Will return a promise that, when `yield`ed, will wait for and return the return value of the constructor.
 
-### `inited()`
+#### `inited()`
 
 Returns a boolean, indicating whether the class was initialized or not.  
 
@@ -54,15 +54,15 @@ Exactly like [AsyncConstruct], except that the blocking `init()` function will b
 Simply `use` this trait in your class, and define a `__wakeup_async` async method.  
 The trait will automatically run the async method on deserialization, and expose a set of APIs to wait on the result of the wakeup function for re-initialization.  
 
-### `wakeup()`
+#### `wakeup()`
 
 Will blockingly wait for execution of the async wakeup function, returning its return value.  
 
-### `wakeupAsynchronously()`
+#### `wakeupAsynchronously()`
 
 Will return a promise that, when `yield`ed, will wait for and return the return value of the wakeup function.
 
-### `wokenUp()`
+#### `wokenUp()`
 
 Returns a boolean, indicating whether the class was initialized or not.  
 
