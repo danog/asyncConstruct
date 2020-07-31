@@ -71,4 +71,4 @@ Returns a boolean, indicating whether the class was initialized or not.
 
 [Example](https://github.com/danog/asyncConstruct/blob/master/examples/BlockingWakeup.php)  
 
-Exactly like [AsyncWakeup], except that the blocking `wakeup()` function will be automatically called on wakeup.  
+Exactly like [AsyncWakeup](#AsyncWakeup), except that the blocking `wakeup()` function will be automatically called on wakeup.  
